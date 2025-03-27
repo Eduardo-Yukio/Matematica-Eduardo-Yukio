@@ -1,0 +1,328 @@
+\documentclass[12pt]{report}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage[autostyle]{csquotes}
+\MakeOuterQuote{"}
+\usepackage{geometry}
+ \geometry{ a4paper, left=20mm, top=20mm, right=20mm, bottom=20mm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{xfrac}
+\usepackage{nicematrix,tikz,booktabs}
+\usepackage{fontawesome5} % termômetros
+\renewcommand{\baselinestretch}{1.1}
+
+\newcommand{\1}{\faThermometerEmpty}
+\newcommand{\2}{\faThermometerQuarter}
+\newcommand{\3}{\faThermometerHalf}
+\newcommand{\4}{\faThermometerThreeQuarters}
+\newcommand{\5}{\faThermometerFull}
+
+
+\title{Lista}
+
+\begin{document}
+
+\begin{center}
+{\Large Proporcionalidade de Grandezas - Parte 1} \\
+\vspace{1mm}
+Eduardo Yukio G. Ishihara \\ 19/03/2025 \\
+{\footnotesize eduardoyukio.ishihara@usp.br}
+\end{center}
+\vspace{5mm}
+
+\section*{Diretamente Proporcionais}
+Dizemos que duas grandes são diretamente proporcionais quando o aumento de uma também acarreta no aumento de outra. De forma geral, multiplicar uma das grandezas faz com que a outra também seja multiplicada pelo mesmo fator.
+Exemplos:
+\begin{itemize}
+    \item Quantidade de maçãs e o preço a ser pago por elas;
+    \item Velocidade de um carro e a distância percorrida, fixado um tempo;
+    \item Quantidade de estudantes e a quantidade de exercícios a serem corrigidos;
+    \item Quantidade de átomos e a massa total;
+    \item Quantidade de animais e a biomassa da espécie;
+    \item Compressão de uma mola (em cm) e a força elástica;
+    \item Massa de um soluto e concentração desse mesmo soluto.
+\end{itemize}
+Note que, definidas duas grandezas, não precisamos entender qual provoca o aumento de qual, isso é, a causa e a consequência, basta entender que as duas crescem (ou decrescem) sob um mesmo fator multiplicativo ($\times 3$, $\times 2$, $\div 2$, $\div 6$, etc).
+
+Um critério essencial para afirmarmos que duas grandezas são diretamente proporcional é garantirmos que, quando uma zera, a outra também zera! Tal critério é uma consequência da nota acima, pois um fator multiplicativo $\times 0$ ainda é um fator multiplicativo. Nos exemplos trazidos, sempre que uma das grandezas é zerada, a outra também é zerada, pode testar!
+
+{\footnotesize A explicação a seguir utiliza conhecimentos de funções lineares, pode pular se não estiver familiarizado!}
+
+Esse critério é essencial, pois entendemos as grandezas proporcionais como funções lineares (com o coeficiente linear igual a $0$ ($f(x)=ax+b, \ b:=0)$. Ao aplicarmos o algoritmo da regra de $3$, usamos as propriedades das funções lineares. Caso esse critério não seja seguido, ainda podemos fazer a análise, mas usando outros métodos, pois a regra de $3$ muito provavelmente levará a um resultado errôneo.
+
+
+\section*{Inversamente Proporcionais}
+Dizemos que duas grandezas são inversamente proporcionais quando o aumento de uma acarreta na redução da outra. De forma geral, multiplicar uma das grandezas faz com que a outra seja dividida pelo mesmo fator. Exemplos:
+\begin{itemize}
+    \item Quantidade de funcionários e o número de dias que leva para uma parede ser construída;
+    \item Velocidade de um carro e o tempo que leva para percorrer uma mesma distância;
+    \item Preço de uma maçã e a quantidade máxima que posso levar com um orçamento fixado;
+    \item Massa de um solvente e concentração de um soluto;
+    \item A  resistência e a corrente elétrica, fixado um potencial elétrico;
+    \item Quantidade de bolas em uma urna e a probabilidade de uma bola fixada ser sorteada ao acaso.
+\end{itemize}
+
+Note que, mais uma vez, não é necessário estabelecer qual grandeza provoca o acréscimo ou decréscimo da outra, basta enxergar que as duas estão conectadas e crescem e descressem sob um mesmo fator multiplicativo. Por exemplo, multiplicar a quantidade de funcionários por $2$ faz com que o número de dias seja dividido por $2$. Ou seja, aplicamos a operação inversa da multiplicação, a divisão. Analogamente, dividir o número de funcionários por $3$ faz com o que a duração seja multiplicada por $3$.
+
+\section*{Regra de $3$}
+A tão conhecida "regra de $3$" nada mais é do que um mecanismo criado para facilitar o cálculo de proporções diretas. De forma geral, são fornecidas duas grandezas, uma relação entre elas (direta ou inversamente proporcionais) e três valores e o objetivo final é determinar o quarte valor faltante. Por questões didáticas, é usual transformar tal processo numa tabela.
+
+\textbf{Exemplo 1}: Uma pessoa vai ao mercado e deseja comprar barras de chocolate. Uma nova promoção diz que cada barra de chocolate sai por R\$ $5,50$. Uma pessoa deseja comprar $18$ barras de chocolate. Quanto ela pagará ao final da compra?
+
+Podemos resumir os dados na seguinte tabela:
+
+\begin{center}
+\begin{tabular}{|c | c|} 
+ \hline
+ Barras de chocolate & Preço (R\$)  \\ [0.5ex] 
+ \hline \hline
+ $1$ & $5,50$ \\ \hline
+ $18$ & $x$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Agora, precisamos determinar a relação entre as grandezas. Se dobrarmos o número de barras de chocolate, o preço e dobrado ou dividido por dois? Evidentemente o preço é dobrado. Portanto, são grandezas diretamente proporcionais (quando uma cresce, a outra também cresce). Setas apontando para a mesma direção são diretamente proporcionais e setas apontando para direções opostas são inversamente proporcionais.
+
+\begin{center}
+\begin{tabular}{|c | c|} 
+ \hline
+ Barras de chocolate & Preço (R\$)  \\ [0.5ex] 
+ \hline \hline
+ $1$ & $5,50$ \\ \hline
+ $\uparrow$ &  $\uparrow$ \\ \hline
+ $18$ & $x$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Definidas que as duas grandezas são diretamente proporcionais, podemos prosseguir para o procedimento clássico: multiplicação em cruz. Temos a seguinte equação:
+$$
+1 \times x = 18 \times 5,50 \Rightarrow x = 99,00
+$$
+Portanto, conclui-se que a pessoa pagará R\$$99,00$ pelas $18$ barras de chocolate.
+
+\vspace{10pt}
+\textbf{Exemplo 2}: Um carro percorre, em $2$ horas uma distância de $150Km$. Mantendo essa mesma velocidade, qual distância o carro percorrerá em um período de $9$ horas?
+
+Repetiremos o mesmo processo do exemplo anterior:
+
+\begin{center}
+\begin{tabular}{|c | c|} 
+ \hline
+ Tempo (horas) & Distância ($Km$)  \\ [0.5ex] 
+ \hline \hline
+ $2$ & $150$ \\ \hline
+ $9$ & $x$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Com o aumento do tempo e velocidade constante, é natural que a distância percorrida também seja aumentada, ou seja, são diretamente proporcionais.
+
+\begin{center}
+\begin{tabular}{|c | c|} 
+ \hline
+ Tempo (horas) & Distância ($Km$)  \\ [0.5ex] 
+ \hline \hline
+ $2$ & $150$ \\ \hline
+ $\uparrow$ &  $\uparrow$ \\ \hline
+ $9$ & $x$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Por fim, multiplicamos em cruz:
+
+$$
+2 \times x = 9 \times 150 \Rightarrow 2x = 1350 \Rightarrow x = \frac{1350}{2} = 675
+$$
+Portanto, conclui-se que o carro percorrerá $675Km$ em $9$ horas.
+
+\vspace{10pt}
+\textbf{Exemplo 3}: Uma construtora tem $20$ funcionários e constrói um galpão em $8$ semanas. Após um corte de funcionários, apenas $14$ funcionários foram mantidos. Qual é o tempo que a construtora levará para construir um galpão equivalente ao primeiro?
+
+Resumindo os dados na tabela:
+
+\begin{center}
+\begin{tabular}{|c | c|} 
+ \hline
+ Funcionários & Duração (semanas) \\ [0.5ex] 
+ \hline \hline
+ $20$ & $8$ \\ \hline
+ $14$ & $x$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Note que, nesse novo exemplo, aumentar o número de funcionários faz com que a duração diminua. Ou seja, as grandezas são inversamente proporcionais, então as setas terão direções opostas.
+
+\begin{center}
+\begin{tabular}{|c | c|} 
+ \hline
+ Funcionários & Duração (semanas) \\ [0.5ex] 
+ \hline \hline
+ $20$ & $8$ \\ \hline
+ $\uparrow$ &  $\downarrow$ \\ \hline
+ $14$ & $x$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Para proceder com os casos inversamente proporcionais, vamos criar uma "tabela auxiliar", onde inverteremos os valores cujas setas apontam para baixo:
+
+\begin{center}
+{\footnotesize Tabela Auxiliar} \\
+\begin{tabular}{|c | c|} 
+ \hline
+ Funcionários & Duração (semanas) \\ [0.5ex] 
+ \hline \hline
+ $20$ & $x$ \\ \hline
+ $\uparrow$ &  $\uparrow$ \\ \hline
+ $14$ & $8$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Agora que a tabela auxiliar está montada e todos os valores têm setas apontando para a mesma direção, podemos prosseguir para o procedimento padrão e multiplicar em cruz:
+$$
+20 \times 8 = 14 \times x \Rightarrow 160 = 14 x \Rightarrow x = \frac{160}{14} = \frac{80}{7} \approx 14.43
+$$
+Portanto, a construtora levará \sfrac{80}{7}, ou aproximadamente $14.43$ dias para terminar a obra com o novo quadro de funcionários.
+
+\vspace{10pt}
+\textbf{Exemplo 4}: Uma fazendeira tem um silo capaz de armazenar alimento suficiente para alimentar os seus $32$ porcos por $5$ meses. Após o período de vendas, apenas $18$ porcos permanecera na sua propriedade. Nesta nova condição, um silo é capaz de armazenar alimento suficiente para quantos meses?
+
+Reduzindo os dados na tabela:
+
+\begin{center}
+\begin{tabular}{|c | c|} 
+ \hline
+ Porcos & Tempo (meses) \\ [0.5ex] 
+ \hline \hline
+ $32$ & $5$ \\ \hline
+ $18$ & $x$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+É fácil perceber que quanto mais porcos, menos tempo dura o alimento armazenado do silo. Então, são grandezas inversamente proporcionais:
+
+\begin{center}
+\begin{tabular}{|c | c|} 
+ \hline
+ Porcos & Tempo (meses) \\ [0.5ex] 
+ \hline \hline
+ $32$ & $5$ \\ \hline
+ $\uparrow$ &  $\downarrow$ \\ \hline
+ $18$ & $x$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Uma vez que as setas não apontam para a mesma direção, constrói-se a tabela auxiliar invertendo uma das colunas:
+
+
+\begin{center}
+{\footnotesize Tabela Auxiliar} \\
+\begin{tabular}{|c | c|} 
+ \hline
+ Porcos & Tempo (meses) \\ [0.5ex] 
+ \hline \hline
+ $32$ & $x$ \\ \hline
+ $\uparrow$ &  $\uparrow$ \\ \hline
+ $18$ & $5$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Finalmente, multiplica-se em cruz:
+$$
+32 \times 5 = 18 \times x \Rightarrow 160 = 18x \Rightarrow x = \frac{160}{18} = \frac{80}{9} \approx 8.89
+$$
+Portanto, o silo é capaz de armazenar alimento para $18$ porcos por \sfrac{80}{9}, ou aproximadamente, $8.89$ meses.
+
+
+
+\pagebreak
+
+\begin{center}
+{\Large Exercícios}
+\end{center}
+
+A lista é extensa, nem todos os itens devem ser feitos na íntegra. Faça os itens até que você tenha certeza de que é capaz de fazer os demais itens sem dificuldades. 
+
+Para ajudá-los, adotei um sistema para classificar a dificuldade dos exercícios que vai de \1 \ (fácil), passa por \2 , \3 , \4 \ e chega a \5 \ (muito difícil). Tal métrica não é absoluta e pode conter erros ou variar de pessoa para pessoa!
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Determine se as grandezas abaixo são proporcionais, inversamente proporcionais ou nenhum dos dois. Não é necessária verificar se são diretamente, isso é, quando uma zera, a outra também zera. \1
+
+\begin{enumerate}
+    \item Quantidade de alunos e o número de carteiras numa sala;
+    \item Quantidade de alunos e a atenção que um professor pode dar para cada aluno;
+    \item Quantidade de árvores e a área com sombra;
+    \item Ano de nascimento e a quantidade de filhos;
+    \item Temperatura de um pote e o tempo que ficou no fogão;
+    \item Temperatura de um pote e o tempo que ficou no refrigerador;
+    \item Velocidade de uma reação e a concentração de um catalisador;
+    \item Velocidade de uma reação e a concentração dos reagentes;
+    \item Força gravitacional e a massa dos corpos;
+    \item Quantidade de copos e o volume de um dos copos;
+    \item Força gravitacional e a distância entre os corpos;
+    \item Altura e o IMC;
+    \item Massa e o IMC;
+    \item Massa de um doce e quantidade de açúcar no doce;
+    \item Massa de um doce e concentração de açúcar no doce;
+    \item Volume de um cubo de metal e a massa desse mesmo cubo;
+    \item Volume de um cubo de metal e a densidade desse mesmo cubo;
+    \item Altura de uma pessoa e a quantidade de sapatos;
+    \item Concentração de $O_2$ e altitude em relação ao mar;
+    \item Temperatura de ebulição da água e altitude em relação ao mar;
+    \item Tempo de exposição a um material radioativo e chances de mutação em uma célula;
+    \item Tempo desde a aplicação de um remédio e sua concentração no sangue;
+    \item Volume de água ingerido e quantidade de fios de cabelo.
+    \end{enumerate}
+
+
+\item Nos itens abaixo, determine se as grandezas são diretamente ou inversamente proporcionais e resolva as situações problemas. \1.
+\begin{enumerate}
+\item Para alimentar o seu cão, uma pessoa gasta $10\ kg$ de ração a cada $15$ dias. Qual a quantidade total de ração consumida por semana, considerando que, por dia, é sempre colocada a mesma quantidade de ração?  
+\item Uma torneira enche um tanque em $5$ horas. Quanto tempo levaria para $3$ com a mesma vazão da torneira anterior  encherem esse mesmo tanque?
+\item Em uma escola, cada professor corrige, em média, $15$ páginas de lição por aluno a cada mês. Uma turma, que continha $13$ alunos, passou a ter $16$ alunos com a chegada de $3$ alunos transferidos. Em média, quantas páginas o professor dessa turma passará a corrigir a cada mês?
+\item Em uma empresa, uma máquina produz $25$ milhares de unidades de parafuso por semana. O gerente deseja expandir a produção para mais regiões do país e comprará mais $7$ máquina idênticas à primeira. Qual é a produção esperada por semana após a expansão?
+\item Uma concorrente da empresa leva $15$ dias para produzir $150$ milhares de unidades de parafuso. Eles desejam reduzir esse tempo para, no máximo, $4$ dias. Quantas máquinas eles devem comprar para atender o novo prazo? Lembre-se que não é possível comprar meia máquina, arredonde apropriadamente a sua resposta.
+\item O ângulo externo de um polígono regular é inversamente proporcional à quantidade de lados. Se um polígono de $3$ lados tem ângulos internos iguais a $120 $\textdegree, determine o ângulo externo de um polígono de $7$ lados.
+\item \2 Usando o mesmo cenário do item anterior, determine o ângulo externo de um polígono de $n$ lados. A sua resposta deve ser a fórmula para o ângulo externo de um polígono regular, ou seja, isole o ângulo em função da quantidade de lados.
+\item Na fase final de um jogo, o inimigo causa dano ao jogador de maneira inversamente proporcional à distância entre o jogador e o inimigo. A uma distância de $6m$, o jogador leva $150$ pontos de dano. Qual deve ser a distância para o dano ser menor que $100$ pontos? E menor que $50$ pontos? E menor que $10$ pontos?
+\item Ainda que pouco usado no cotidiano, define-se $1\ hm$ (lê-se "hectômetro") como $100\ m$. Converta $5\ hm$, $6.7\ hm$, $13.1\ hm$ e $50\ hm$ em metros. Agora, converta $1\ m$, $150\ m$, $6548\ m$, $1500\ m$ e $0.1\ m$ em $hm$.
+\item $1m^3$ de água é equivalente a $1.000L$ de água. Determine quantos litros de água equivalem a $8m^3$ de água. Escreva com suas palavras uma maneira de converter $m^3$ em $L$.
+\item Em uma cidade, o custo da conta de água é determinado pelo gasto de água em $m^3$ da residência. Um novo morador deseja encher sua piscina de $28.000\ L$, mas não sabe quanto custa o $m^3$ de água na cidade. Seu vizinho informou que, no mês passado, gastou $15\ m^3$ e pagou um valor de $R\$35,00$. Quanto custará ao novo morador encher sua piscina?
+\item A bula de um medicamento determina que uma dose de $130\ mg$ deve ser administrada para cada $Kg$ de um paciente. Quantos $mg$ desse medicamento devem ser ministrados a um paciente de $70\ Kg$? E um de $120\ Kg$? Uma dose de $12.700\ mg$ é adequada para um paciente de, aproximadamente, quantos $Kg$?
+\item Em estimativas oficiais, costuma-se adotar que uma multidão densa tem uma média de $4$ pessoas por $m^2$. Em um show recente num estádio em SP, o corpo de bombeiros verificou que estava muito lotado e, portanto, trata-se de uma multidão densa. O espaço ocupado pela multidão era a metade de um círculo de raio $40m$. Estime a quantidade de pessoas assistindo ao show.
+\item Durante a realização de exames de sangue, coleta-se uma amostra do sangue da pessoa e, a partir dessa parcela, estima-se os parâmetros desejados de todo o sangue na pessoa. Tal técnica é utilizado, pois é inviável medir os parâmetros necessários de todo o sangue de uma pessoa. Um laboratório verificou que havia $11$ milhões de glóbulos brancos numa amostra de $1 \ ml$ de sangue de um homem adulto. Considerando que um homem adulto possui, em média, $5 \ L$ de sangue, estime a quantidade total de glóbulos brancos no sangue dessa pessoa.
+\item Um carro leva $6$ horas para ir do Rio de Janeiro a São Paulo e consome $40\ L$ a cada viagem. Um funcionário de uma empresa precisa fazer essa viagem (ida e então a volta) duas vezes por mês. Considere que a volta (São Paulo para o Rio de Janeiro) leva o mesmo tempo e consumo o mesmo combustível. Determine o consumo de gasolina em uma ano.
+\item Ainda nas condições do item anterior, determine quantas horas o motorista passou dirigindo de uma cidade para a outra no período de um ano.
+\item Se a velocidade média do carro fosse dobrada, quantas horas o motorista teria passado dirigindo de uma cidade para a outra?
+\item Um objeto percorre uma distância de $10\ m$ em $1\ s$. Mantendo essa mesma velocidade, qual seria a distância percorrida em $15.8\ s$?
+\item \2 Ainda nas condições do item anterior, qual seria a distância percorrida se o tempo que o objeto ficou em movimento fosse $t$? Ou seja, monte a "regra de $3$", trabalhe com as variáveis e determine a distância em função do tempo.
+\item \3 Um objeto percorre uma distância de $d$ em $1\ s$. Qual distância esse objeto percorreria em um tempo $t$? Ou seja, monte a "regra de $3$", trabalhe com as variáveis e determine a distância percorrida em função de $t$ e $d$. Não confunda as variáveis, chame a nova distância percorrida de uma nova letra. Resolver esse item é equivalente a deduzir a fórmula da velocidade média de um corpo. 
+
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
+
