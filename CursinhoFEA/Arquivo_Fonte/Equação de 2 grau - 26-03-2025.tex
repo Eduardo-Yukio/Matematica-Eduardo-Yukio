@@ -1,0 +1,611 @@
+\documentclass[12pt]{report}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage[autostyle]{csquotes}
+\MakeOuterQuote{"}
+\usepackage{geometry}
+ \geometry{ a4paper, left=20mm, top=20mm, right=20mm, bottom=20mm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{lipsum}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{array}
+\newcommand\mc[1]{\multicolumn{1}{c}{#1}}
+\usepackage{xfrac}
+\usepackage{nicematrix,tikz,booktabs}
+\usepackage{fontawesome5} % termômetros
+\renewcommand{\baselinestretch}{1.1}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LO]{\footnotesize {Eduardo Yukio G. Ishihara\\ eduardoyukio.ishihara@usp.br}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\newcommand{\1}{\faThermometerEmpty}
+\newcommand{\2}{\faThermometerQuarter}
+\newcommand{\3}{\faThermometerHalf}
+\newcommand{\4}{\faThermometerThreeQuarters}
+\newcommand{\5}{\faThermometerFull}
+
+
+\title{Lista}
+
+\begin{document}
+
+\begin{center}
+{\Large Equação de Segundo Grau - Parte 1} \\ % ALTERAR
+\vspace{1mm}
+Eduardo Yukio G. Ishihara \\ 19/03/2025 \\ % ALTERAR
+{\footnotesize eduardoyukio.ishihara@usp.br \\
+Editado em 21/04/2025} % ALTERAR
+\end{center}
+\vspace{5mm}
+
+\section*{Definição}
+Definimos equações de segundo grau, ou equações quadráticas, como todas as equações da forma
+$$ a x^2+bx+c=0$$,
+Onde:
+\begin{itemize}
+    \item $x$ é a variável (ou incógnita);
+    \item $a,b,c$ são os coeficientes
+    \item $a \neq 0$, caso contrário seria uma equação de $1$\textdegree{} grau;
+    \item $b,c \in \mathbb{R}$, $b$ e $c$ são números reais quaisquer, até mesmo zero.
+\end{itemize}
+
+Para encontrar as soluções da equação, ou suas raízes, temos algumas alternativas já bem conhecidas.
+
+\subsection*{Fórmula de Bhaskara}
+O método mais conhecido e usado para encontrar as soluções da equação é a fórmula de \text{Bhaskara}:
+$$
+\begin{aligned}
+    x &= \frac{-b \pm \sqrt{\Delta}}{2a} \\
+    \Delta &= b^2-4ac
+\end{aligned} $$
+Ao aplicar a fórmula de Bhaskara, é interessante notar que há três possíveis casos para o valor de $\Delta$:
+\begin{itemize}
+    \item $\Delta <0$: não há nenhuma raiz real;
+    \item $\Delta = 0$: há duas raízes reais iguais ou, alternativamente, pode-se interpretar de maneira didática que a equação tem apenas uma solução real;
+    \item $\Delta >0$: há duas raízes reais distintas.
+\end{itemize}
+Quando $\Delta<0$, seria necessário calcular a raiz quadrada de um número negativo, o que é impossível quando lidamos apenas com os números reais ($\mathbb{R}$). Quando $\Delta = 0$, somar $\sqrt{0}$ ou subtrair $\sqrt{0}$ não altera o valor de $x$, por isso temos duas raízes reais iguais. Ao calcular as duas raízes, é usual definir $x_1$ e $x_2$ como as duas raízes da equação e tal padrão será mantido neste documento.
+
+O método da fórmula de Bhaskara é muito utilizado no Brasil, pois é um algoritmo fácil de ser decorado, os procedimentos são muito bem definidos e o cálculo do discriminante ($\Delta$) permite ao aluno perceber quantas raízes tem uma equação.
+
+Em contrapartida, para alguns casos, as contas necessárias podem ser muito extensas ou complicadas, quando os coeficientes são números muito grandes ou com muitas casas decimais.
+
+A fórmula de Bhaskara é muito antiga e, ao contrário do que muitas pessoas acreditam, não foi criada pelo matemático indiano Bhaskara II. Uma demonstração da fórmula pode ser encontrada após a seção de exercícios.
+
+
+
+\subsubsection*{Exemplo 1.1}
+
+Considere a equação:
+$$ x^2 - 5x + 6 = 0 $$
+
+Identificamos os coeficientes:
+\begin{itemize}
+    \item $a = 1$
+    \item $b = -5$
+    \item $c = 6$
+\end{itemize}
+
+Calculamos o discriminante:
+$$ \Delta = b^2 - 4ac = (-5)^2 - 4 \cdot 1 \cdot 6 = 25 - 24 = 1 $$
+
+Aplicando a fórmula de Bhaskara:
+$$
+x = \frac{-b \pm \sqrt{\Delta}}{2a} = \frac{-(-5) \pm \sqrt{1}}{2 \cdot 1} = \frac{5 \pm 1}{2}
+$$
+
+Assim, as duas soluções são:
+\[
+\begin{aligned}
+    x_1 &= \frac{5 - 1}{2} = 2 \\
+    x_2 &= \frac{5 + 1}{2} = 3
+\end{aligned}
+\]
+
+Portanto, as raízes da equação são $x_1 = 2$ e $x_2 = 3$.
+
+
+
+\subsubsection*{Exemplo 1.2}
+Considere a equação:
+$$ x^2 - 6x + 9 = 0 $$
+
+Coeficientes:
+\begin{itemize}
+    \item $a = 1$
+    \item $b = -6$
+    \item $c = 9$
+\end{itemize}
+
+Calculamos o discriminante:
+$$ \Delta = b^2 - 4ac = (-6)^2 - 4 \cdot 1 \cdot 9 = 36 - 36 = 0 $$
+
+Aplicando a fórmula de Bhaskara:
+$$
+x = \frac{-b \pm \sqrt{0}}{2a} = \frac{6 \pm 0}{2} = 3
+$$
+
+Como $\Delta = 0$, temos duas raízes reais iguais:
+\[
+x_1 = x_2 = 3
+\]
+
+
+
+\subsubsection*{Exemplo 1.3}
+
+Considere a equação:
+$$ x^2 + 2x + 5 = 0 $$
+
+Coeficientes:
+\begin{itemize}
+    \item $a = 1$
+    \item $b = 2$
+    \item $c = 5$
+\end{itemize}
+
+Calculamos o discriminante:
+$$ \Delta = b^2 - 4ac = 2^2 - 4 \cdot 1 \cdot 5 = 4 - 20 = -16 $$
+
+Como $\Delta < 0$, não existem raízes reais. Isso ocorre porque não podemos extrair a raiz quadrada de um número negativo no conjunto dos reais ($\mathbb{R}$).
+
+Portanto, a equação não possui solução real.
+
+
+
+\subsection*{Soma e Produto}
+O método da soma e produto, diferentemente da fórmula de Bhaskara, não retorna imediatamente as raízes da equação, mas fornece informações sobre as raízes, que devem ser estimadas com estas novas "dicas".
+
+O método é recomendado quando as raízes são inteiras. Por mais paradoxal que possa soar, é comum que os vestibulares, ou exercícios de apostilas, tragam equações de segundo grau feitas propositalmente para que as raízes sejam inteiras, então o método é uma aposta válida, especialmente em tais contextos. Adicionalmente, com a prática, fica evidente quando as raízes serão facilmente encontradas ou não.
+
+Sugere-se tentar o método da soma e produto inicialmente. Se a soma ou o produto não forem inteiros ou se não for possível encontrar as raízes em poucos segundos, recorra a um método mais certo, ainda que mais lento, como é o caso da fórmula de Bhaskara.
+
+$$\begin{aligned}
+    S =& \; x_1 + x_2 = -\frac{b}{a}  \\
+    P =& \; x_1 \times x_2 = \phantom{-} \frac{c}{a}
+\end{aligned}$$
+Onde:
+\begin{itemize}
+    \item $a,b,c$ são os coeficientes da equação, assim como definidos inicialmente.
+    \item $S$ é a soma das raízes
+    \item $P$ é o produto das raízes
+\end{itemize}
+
+Há alguns casos particulares que podem facilitar a obtenção das raízes da equação:
+\begin{itemize}
+    \item Quando $P=0$, uma das raízes é $0$ e, consequentemente, a outra raiz é igual a $S$;
+    \item Quando $S=0$, uma das raízes é $\sqrt{P}$ e a outra é $-\sqrt{P}$;
+    \item Quando $S = P+1$, ou seja, $S$ é uma unidade maior do que $P$, uma das raízes é $1$ e a outra raiz é $P$;
+    \item Quando $P$ é um quadrado perfeito e $S$ é par, verifique se $2\sqrt{P} =S$. Neste caso, as duas raízes são iguais a $\frac{S}{2}$, ou simplesmente $\sqrt{P}$.
+\end{itemize}
+
+Ao analisar a soma e o produto, você pode notar alguns padrões: o produto pode ser positivo ou negativo e a soma pode ser positiva ou negativa. Obviamente estamos excluindo os casos em que $S=0$ ou $P=0$, pois foram contemplados anteriormente.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ & $P > 0$ & $P < 0$ \\
+\hline
+$S > 0$ & Ambas positivas & Uma positiva, uma negativa \\
+\hline
+$S < 0$ & Ambas negativas & Uma negativa, uma positiva \\
+\hline
+\end{tabular}
+\end{center}
+
+
+Dedique um tempo para compreender as relações estabelecidas acima. Mantenha em mente que, ao somar dois números, mantém-se o sinal do maior número (em módulo) e que a multiplicação de números com sinais iguais sempre é positiva e a multiplicação de números com sinais diferentes sempre é negativa.
+
+Se a soma e o produto que você obteve não se encaixam em nenhum dos casos anteriores, recomenda-se fatorar $P$ em primos. E brincar de "montar" número de tal modo que a soma das possíveis raízes seja igual a $S$. É evidente que esse processo pode ser demorado, o que possivelmente indicará que uma mudança de estratégia é o melhor caminho a ser tomado.
+
+A demonstração do método da soma e produto pode ser encontrada após a seção de exercícios.
+
+
+
+\subsubsection*{Exemplo 2.1}
+
+Considere novamente a equação:
+$$ x^2 - 5x + 6 = 0 $$
+
+Identificamos os coeficientes:
+\begin{itemize}
+    \item $a = 1$
+    \item $b = -5$
+    \item $c = 6$
+\end{itemize}
+
+Calculamos a soma e o produto das raízes:
+\[
+\begin{aligned}
+    S &= -\frac{b}{a} = -\frac{-5}{1} = 5 \\
+    P &= \frac{c}{a} = \frac{6}{1} = 6
+\end{aligned}
+\]
+
+Agora, procuramos dois números cuja soma seja $5$ e cujo produto seja $6$. Os números que satisfazem isso são $2$ e $3$, pois:
+\[
+2 + 3 = 5 \quad \text{e} \quad 2 \cdot 3 = 6
+\]
+
+Portanto, as raízes da equação são $x_1 = 2$ e $x_2 = 3$.
+
+
+
+\subsubsection*{Exemplo 2.2}
+
+Considere a equação:
+$$ x^2 + 5x = 0 $$
+
+Primeiramente, completamos a equação geral:
+$$ x^2 + 5x + 0 = 0 $$
+
+Coeficientes:
+\begin{itemize}
+    \item $a = 1$
+    \item $b = 5$
+    \item $c = 0$
+\end{itemize}
+
+Calculamos a soma e o produto das raízes:
+\[
+\begin{aligned}
+    S &= -\frac{b}{a} = -\frac{5}{1} = -5 \\
+    P &= \frac{c}{a} = \frac{0}{1} = 0
+\end{aligned}
+\]
+
+Quando o produto das raízes é zero ($P = 0$), uma das raízes obrigatoriamente é zero. A outra raiz será igual à soma, já que:
+$$ x_1 + x_2 = -5 \quad \text{e} \quad x_1 \cdot x_2 = 0 $$
+
+Logo, as raízes são:
+\[
+x_1 = 0, \quad x_2 = -5
+\]
+
+Portanto, a equação \( x^2 + 5x = 0 \) tem duas raízes reais: $0$ e $-5$.
+
+
+
+\subsubsection*{Exemplo 2.3}
+
+Considere a equação:
+$$ x^2 - 36 = 0 $$
+
+Podemos reescrevê-la como:
+$$ x^2 + 0x - 36 = 0 $$
+
+Coeficientes:
+\begin{itemize}
+    \item $a = 1$
+    \item $b = 0$
+    \item $c = -36$
+\end{itemize}
+
+Calculamos a soma e o produto das raízes:
+\[
+\begin{aligned}
+    S &= -\frac{b}{a} = -\frac{0}{1} = 0 \\
+    P &= \frac{c}{a} = \frac{-36}{1} = -36
+\end{aligned}
+\]
+
+Quando $S = 0$, sabemos que as raízes são opostas (uma é o negativo da outra), e podemos usar:
+\[
+x_1 = \sqrt{36} = 6, \quad x_2 = -\sqrt{36} = -6
+\]
+
+Portanto, as raízes da equação são:
+\[
+x_1 = 6 \quad \text{e} \quad x_2 = -6
+\]
+
+
+
+\subsubsection*{Exemplo 2.4}
+
+Considere a equação:
+$$ x^2 + 16x - 17 = 0 $$
+
+Coeficientes:
+\begin{itemize}
+    \item $a = 1$
+    \item $b = 16$
+    \item $c = -17$
+\end{itemize}
+
+Calculamos a soma e o produto das raízes:
+\[
+\begin{aligned}
+    S &= -\frac{b}{a} = -\frac{16}{1} = -16 \\
+    P &= \frac{c}{a} = \frac{-17}{1} = -17
+\end{aligned}
+\]
+
+Note que:
+\[
+S = P + 1
+\]
+
+Esse é um caso particular conhecido: quando a soma das raízes é uma unidade maior do que o produto, uma das raízes será \( 1 \) e a outra será \( P \). Assim:
+
+\[
+x_1 = 1, \quad x_2 = -17
+\]
+
+Verificando:
+$$
+1 + (-17) = -16  $$
+$$
+1 \times (-17) = -17  
+$$
+
+Portanto, as raízes da equação são:
+\[
+x_1 = 1 \quad \text{e} \quad x_2 = -17
+\]
+
+
+
+\subsubsection*{Exemplo 2.5}
+
+Considere a equação:
+$$ x^2 - 10x + 25 = 0 $$
+
+Coeficientes:
+\begin{itemize}
+    \item $a = 1$
+    \item $b = -10$
+    \item $c = 25$
+\end{itemize}
+
+Calculamos a soma e o produto das raízes:
+\[
+\begin{aligned}
+    S &= -\frac{b}{a} = -\frac{-10}{1} = 10 \\
+    P &= \frac{c}{a} = \frac{25}{1} = 25
+\end{aligned}
+\]
+
+Note que:
+\begin{itemize}
+    \item $P = 25 = 5^2$ (um quadrado perfeito);
+    \item $S = 10$ é par;
+    \item $2 \cdot \sqrt{P} = 2 \cdot 5 = 10 = S$.
+\end{itemize}
+
+Portanto, as duas raízes são reais e iguais a:
+\[
+x_1 = x_2 = \frac{S}{2} = \frac{10}{2} = 5
+\]
+
+
+
+
+\pagebreak
+
+\begin{center}
+{\Large Exercícios}
+\end{center}
+
+A lista é extensa, nem todos os itens devem ser feitos na íntegra. Faça os itens até que você tenha certeza de que é capaz de fazer os demais itens sem dificuldades. 
+
+Para ajudá-los, adotei um sistema para classificar a dificuldade dos exercícios que vai de \1 \ (fácil), passa por \2 , \3 , \4 \ e chega a \5 \ (muito difícil). Tal métrica não é absoluta e pode conter erros ou variar de pessoa para pessoa!
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Resolva as equações abaixo usando a fórmula de Bhaskara. Ao final, verifique se as respostas, quando existirem, realmente são raízes da equação. \1 a \3
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\arabic*.]
+    \item $x^2 + 2x - 3 = 0$
+    \item $x^2 + 10x + 25 = 0$
+    \item $x^2 - 14x + 49 = 0$
+    \item $x^2 + 7x - 30 = 0$
+    \item $x^2 - 11x + 24 = 0$
+    \item $x^2 - 6x + 5 = 0$
+    \item $x^2 - 5x + 6 = 0$
+    \item $5x^2 + 3x - 2 = 0$
+    \item $4x^2 - 4x - 15 = 0$
+    \item $x^2 + 4x - 21 = 0$
+    \item $x^2 + 3x - 10 = 0$
+    \item $2x^2 + 5x - 3 = 0$
+    \item $x^2 - x - 12 = 0$
+    \item $x^2 + 4x + 4 = 0$
+    \item $x^2 - 8x + 16 = 0$
+    \item $x^2 - 10x + 9 = 0$
+    \item $x^2 - 2x - 8 = 0$
+    \item $x^2 - 10x + 25 = 0$
+    \item $x^2 - 36 = 0$
+    \item $x^2 + 5x = 0$
+    \item $x^2 + 16x - 17 = 0$
+    \item $x^2 - 2x + 1 = 0$
+    \item $x^2 - 6x + 9 = 0$
+    \item $x^2 + 9x + 14 = 0$
+    \item $3x^2 + 2x - 1 = 0$
+    \item $2x^2 - 3x - 2 = 0$
+    \item $x^2 + x + 1 = 0$
+    \item $x^2 + 6x + 13 = 0$
+    \item $3x^2 - 13x + 10 = 0$
+    \item $x^2 - 4x - 12 = 0$
+    \item $6x^2 - 5x - 6 = 0$
+    \item $4x^2 - 4x + 1 = 0$
+    \item $x^2 + 12x + 40 = 0$
+    \item $x^2 + x + 4 = 0$
+    \item $2x^2 - 7x + 3 = 0$
+    \item $3x^2 - 12x + 12 = 0$
+    \item $5x^2 - 20x + 20 = 0$
+    \item $2x^2 + 8x + 8 = 0$
+    \item $x^2 - x + 7 = 0$
+    \item $x^2 + 2x + 5 = 0$
+    \end{enumerate}
+\end{multicols}
+
+\newpage
+\item Resolva as equações abaixo usando o método da Soma e Produto. Ao final, verifique se as respostas, realmente são raízes da equação.  \1 a \3
+\begin{multicols}{2}
+\begin{enumerate}[label=\arabic*.]
+    \item $x^2 - 5x + 6 = 0$
+    \item $x^2 + 7x + 10 = 0$
+    \item $x^2 - 6x + 8 = 0$
+    \item $x^2 - 9x + 20 = 0$
+    \item $x^2 + 3x - 10 = 0$
+    \item $x^2 - 3x - 10 = 0$
+    \item $x^2 + 11x + 30 = 0$
+    \item $x^2 + x - 12 = 0$
+    \item $x^2 - x - 20 = 0$
+    \item $x^2 + 4x - 21 = 0$
+    \item $x^2 - 2x - 15 = 0$
+    \item $x^2 + 6x + 5 = 0$
+    \item $x^2 - 8x + 7 = 0$
+    \item $x^2 - 10x + 21 = 0$
+    \item $x^2 + 10x + 16 = 0$
+    \item $x^2 + 13x + 40 = 0$
+    \item $x^2 - 4x + 3 = 0$
+    \item $x^2 - 11x + 30 = 0$
+    \item $x^2 + 12x + 35 = 0$
+    \item $x^2 - 13x + 36 = 0$
+    \item $x^2 + 15x + 50 = 0$
+    \item $x^2 + 14x + 48 = 0$
+    \item $x^2 - 12x + 27 = 0$
+    \item $x^2 - 15x + 50 = 0$
+    \item $x^2 - 7x + 10 = 0$
+    \item $x^2 + 8x + 7 = 0$
+    \item $x^2 - 16x + 63 = 0$
+    \item $x^2 + 9x + 14 = 0$
+    \item $x^2 - 14x + 45 = 0$
+    \item $x^2 + 5x - 24 = 0$
+\end{enumerate}
+\end{multicols}
+
+\end{enumerate}
+
+\pagebreak
+
+\begin{center}
+{\Large Demonstrações}
+\end{center}
+\subsection*{Fórmula de Bhaskara}
+
+Queremos resolver a equação geral do segundo grau:
+\[
+ax^2 + bx + c = 0 \qquad (a \neq 0)
+\]
+
+\textbf{Passo 1:} Dividimos todos os termos por $a$ para deixar o coeficiente de $x^2$ igual a 1:
+\[
+x^2 + \frac{b}{a}x + \frac{c}{a} = 0
+\]
+
+\textbf{Passo 2:} Subtraímos $\frac{c}{a}$ dos dois lados:
+\[
+x^2 + \frac{b}{a}x = -\frac{c}{a}
+\]
+
+\textbf{Passo 3:} Completamos o quadrado. Somamos e subtraímos $\left(\frac{b}{2a}\right)^2$ do lado esquerdo:
+\[
+x^2 + \frac{b}{a}x + \left( \frac{b}{2a} \right)^2 = -\frac{c}{a} + \left( \frac{b}{2a} \right)^2
+\]
+
+\textbf{Passo 4:} Escrevemos o lado esquerdo como quadrado perfeito:
+\[
+\left( x + \frac{b}{2a} \right)^2 = \frac{b^2 - 4ac}{4a^2}
+\]
+
+\textbf{Passo 5:} Extraímos a raiz quadrada dos dois lados:
+\[
+x + \frac{b}{2a} = \pm \frac{\sqrt{b^2 - 4ac}}{2a}
+\]
+
+\textbf{Passo 6:} Isolamos $x$:
+\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+Assim, obtemos a \textbf{fórmula de Bhaskara}:
+\[
+x = \frac{-b \pm \sqrt{\Delta}}{2a} \quad \text{com } \Delta = b^2 - 4ac
+\]
+
+\pagebreak
+\subsection*{Soma e Produto}
+Da fórmula de Bhaskara, temos:
+
+$$
+\begin{aligned}
+x_1 &= \frac{-b + \sqrt{b^2 - 4ac}}{2a} \\
+x_2 &= \frac{-b - \sqrt{b^2 - 4ac}}{2a}
+\end{aligned}
+$$
+
+Para a soma:
+
+\textbf{Passo 1:} Substituímos pelos valores que já conhecemos:
+$$x_1+x_2 = \frac{-b + \sqrt{b^2 - 4ac}}{2a} + \frac{-b - \sqrt{b^2 - 4ac}}{2a}$$
+
+\textbf{Passo 2:} Realizamos a soma de frações:
+$$x_1+x_2 = \frac{(-b + \sqrt{b^2 - 4ac})+(-b - \sqrt{b^2 - 4ac})}{2a}$$
+
+\textbf{Passo 3:} Removemos os parênteses:
+$$x_1+x_2 = \frac{-b + \sqrt{b^2 - 4ac} -b - \sqrt{b^2 - 4ac})}{2a}$$
+
+\textbf{Passo 4:} Juntamos os termos semelhantes:
+$$x_1+x_2 = \frac{-2b}{2a}$$
+
+\textbf{Passo 5:} Simplificamos a fração:
+$$x_1+x_2 =\frac{-b}{a}$$
+
+Assim, obtemos a \textbf{soma}:
+\[
+x_1+x_2 = \frac{-b}{a}
+\]
+
+\break
+
+Para o produto:
+
+\textbf{Passo 1:} Substituímos pelos valores que já conhecemos:
+$$x_1 \times x_2 = \frac{-b + \sqrt{b^2 - 4ac}}{2a} \times \frac{-b - \sqrt{b^2 - 4ac}}{2a}$$
+
+\textbf{Passo 2:} Realizamos a multiplicação de frações:
+$$x_1 \times x_2 = \frac{(-b + \sqrt{b^2 - 4ac})\times(-b - \sqrt{b^2 - 4ac})}{(2a) \times (2a)}$$
+
+\textbf{Passo 3:} No denominador, usamos o produto da soma pela diferença $(x+y)\times(x-y)=x^2-y^2$:
+$$x_1 \times x_2 = \frac{(-b)^2 - \left(\sqrt{b^2 - 4ac}\right)^2}{(2a)^2}$$
+
+\textbf{Passo 4:} Efetuamos as potenciações:
+$$x_1 \times x_2 = \frac{b^2 - \left(b^2 - 4ac\right)}{4a^2}$$
+
+\textbf{Passo 5:} Removemos os parênteses:
+$$x_1 \times x_2 = \frac{b^2 - b^2 + 4ac}{4a^2}$$
+
+\textbf{Passo 6:} Juntamos os termos semelhantes:
+$$x_1 \times x_2 = \frac{4ac}{4a^2}$$
+
+\textbf{Passo 7:} Simplificamos a fração:
+$$x_1 \times x_2 = \frac{c}{a}$$
+
+Assim, obtemos o \textbf{produto}:
+\[
+x_1 \times x_2 = \frac{c}{a}
+\]
+
+\end{document}
+
