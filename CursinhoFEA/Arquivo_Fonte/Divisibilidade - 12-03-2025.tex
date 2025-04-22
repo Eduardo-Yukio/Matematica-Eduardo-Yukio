@@ -16,9 +16,24 @@
 \usepackage{systeme}
 \usepackage{mathtools}
 \usepackage{lipsum}
+\usepackage{enumitem}
 \usepackage{multicol}
+\usepackage{multirow}
+\usepackage{array}
+\newcommand\mc[1]{\multicolumn{1}{c}{#1}}
+\usepackage{xfrac}
+\usepackage{nicematrix,tikz,booktabs}
 \usepackage{fontawesome5} % termômetros
 \renewcommand{\baselinestretch}{1.1}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LO]{\footnotesize {Eduardo Yukio G. Ishihara\\ eduardoyukio.ishihara@usp.br}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
 
 \newcommand{\1}{\faThermometerEmpty}
 \newcommand{\2}{\faThermometerQuarter}
@@ -28,16 +43,15 @@
 
 
 \title{Lista}
-\author{Eduardo Yukio}
-\date{March 2025}
 
 \begin{document}
 
 \begin{center}
-{\Large Divisibilidade - 12/03/2025} \\
+{\Large Equação de Segundo Grau - Parte 1} \\ % ALTERAR
 \vspace{1mm}
-Eduardo Yukio G. Ishihara \\
-{\footnotesize eduardoyukio.ishihara@usp.br}
+Eduardo Yukio G. Ishihara \\ 19/03/2025 \\ % ALTERAR
+{\footnotesize eduardoyukio.ishihara@usp.br \\
+Editado em 21/04/2025} % ALTERAR
 \end{center}
 \vspace{5mm}
 
@@ -53,7 +67,7 @@ No estudo da divisibilidade, os números primos são muito importantes, pois ele
     \item \textbf{Divisibilidade por $1$}: Todo número é divisível por $1$.
     
     \item \textbf{Divisibilidade por $2$}: O número deve ser par, ou seja, o último digito deve ser $0,2,4,6$ ou $8$. \\
-    Ex.: $138$ é divisível por $2$, pois termina é par (termina em $8$);\\
+    Ex.: $138$ é divisível por $2$, pois é par (termina em $8$);\\
     \phantom{Ex.: }$143$ não é divisível por $2$, pois não termina em par ($3$ é ímpar).
     
     \item \textbf{Divisibilidade por $3$}: A soma dos dígitos do número deve ser divisível por 3. \\
@@ -77,9 +91,9 @@ No estudo da divisibilidade, os números primos são muito importantes, pois ele
     
     \item \textbf{Divisibilidade por $8$}:  Os três últimos dígitos devem ser divisíveis por $8$\\
     Ex.: $14.584$ é divisível por $8$, pois $584$ é divisível por $8$ (faça a conta);\\
-    \phantom{Ex.: }$15.364$ não é divisível por $8$, pois $364$ não é divisível por $4$.
+    \phantom{Ex.: }$15.364$ não é divisível por $8$, pois $364$ não é divisível por $8$.
     
-    \item \textbf{Divisibilidade por $9$}: A soma dos digitos do número deve ser divisível por 3. \\
+    \item \textbf{Divisibilidade por $9$}: A soma dos dígitos do número deve ser divisível por $9$. \\
     Ex.: $123.456.789$ é divisível por $9$, pois $1+2+3+4+5+6+7+8+9=45$ e $45$ é divisível por $9$; \\
     \phantom{Ex.: }$4.512.688$ não é divisível por $3$, pois $4+5+1+2+6+8+8=34$ e $34$ não é divisível por $9$;\\
     Note que você pode aplicar o critério da soma dos algarismos mais uma vez sobre o $35$ para verificar se ele é divisível por $9$.
@@ -201,4 +215,3 @@ Para ajudá-los, adotei um sistema para classificar a dificuldade dos exercício
 
 \end{enumerate}
 \end{document}
-
