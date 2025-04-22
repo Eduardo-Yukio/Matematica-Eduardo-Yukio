@@ -16,11 +16,24 @@
 \usepackage{systeme}
 \usepackage{mathtools}
 \usepackage{lipsum}
+\usepackage{enumitem}
 \usepackage{multicol}
+\usepackage{multirow}
+\usepackage{array}
+\newcommand\mc[1]{\multicolumn{1}{c}{#1}}
 \usepackage{xfrac}
 \usepackage{nicematrix,tikz,booktabs}
 \usepackage{fontawesome5} % termômetros
 \renewcommand{\baselinestretch}{1.1}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LO]{\footnotesize {Eduardo Yukio G. Ishihara\\ eduardoyukio.ishihara@usp.br}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
 
 \newcommand{\1}{\faThermometerEmpty}
 \newcommand{\2}{\faThermometerQuarter}
@@ -34,12 +47,14 @@
 \begin{document}
 
 \begin{center}
-{\Large Proporcionalidade de Grandezas - Parte 1} \\
+{\Large Equação de Segundo Grau - Parte 1} \\ % ALTERAR
 \vspace{1mm}
-Eduardo Yukio G. Ishihara \\ 19/03/2025 \\
-{\footnotesize eduardoyukio.ishihara@usp.br}
+Eduardo Yukio G. Ishihara \\ 19/03/2025 \\ % ALTERAR
+{\footnotesize eduardoyukio.ishihara@usp.br \\
+Editado em 21/04/2025} % ALTERAR
 \end{center}
 \vspace{5mm}
+
 
 \section*{Diretamente Proporcionais}
 Dizemos que duas grandes são diretamente proporcionais quando o aumento de uma também acarreta no aumento de outra. De forma geral, multiplicar uma das grandezas faz com que a outra também seja multiplicada pelo mesmo fator.
@@ -53,9 +68,9 @@ Exemplos:
     \item Compressão de uma mola (em cm) e a força elástica;
     \item Massa de um soluto e concentração desse mesmo soluto.
 \end{itemize}
-Note que, definidas duas grandezas, não precisamos entender qual provoca o aumento de qual, isso é, a causa e a consequência, basta entender que as duas crescem (ou decrescem) sob um mesmo fator multiplicativo ($\times 3$, $\times 2$, $\div 2$, $\div 6$, etc).
+Note que, definidas duas grandezas, não precisamos entender qual provoca o aumento de qual, isso é, a causa e a consequência, basta entender que as duas crescem (ou decrescem), sob um mesmo fator multiplicativo ($\times 3$, $\times 2$, $\div 2$, $\div 6$, etc).
 
-Um critério essencial para afirmarmos que duas grandezas são diretamente proporcional é garantirmos que, quando uma zera, a outra também zera! Tal critério é uma consequência da nota acima, pois um fator multiplicativo $\times 0$ ainda é um fator multiplicativo. Nos exemplos trazidos, sempre que uma das grandezas é zerada, a outra também é zerada, pode testar!
+Um critério essencial para afirmarmos que duas grandezas são diretamente proporcionais é garantirmos que, quando uma zera, a outra também zera! Tal critério é uma consequência da nota acima, pois um fator multiplicativo $\times 0$ ainda é um fator multiplicativo. Nos exemplos trazidos, sempre que uma das grandezas é zerada, a outra também será zerada — pode testar!
 
 {\footnotesize A explicação a seguir utiliza conhecimentos de funções lineares, pode pular se não estiver familiarizado!}
 
@@ -199,7 +214,7 @@ Agora que a tabela auxiliar está montada e todos os valores têm setas apontand
 $$
 20 \times 8 = 14 \times x \Rightarrow 160 = 14 x \Rightarrow x = \frac{160}{14} = \frac{80}{7} \approx 14.43
 $$
-Portanto, a construtora levará \sfrac{80}{7}, ou aproximadamente $14.43$ dias para terminar a obra com o novo quadro de funcionários.
+Portanto, a construtora levará \sfrac{80}{7}, ou aproximadamente $14.43$ semanas para terminar a obra com o novo quadro de funcionários.
 
 \vspace{10pt}
 \textbf{Exemplo 4}: Uma fazendeira tem um silo capaz de armazenar alimento suficiente para alimentar os seus $32$ porcos por $5$ meses. Após o período de vendas, apenas $18$ porcos permanecera na sua propriedade. Nesta nova condição, um silo é capaz de armazenar alimento suficiente para quantos meses?
@@ -268,7 +283,7 @@ Para ajudá-los, adotei um sistema para classificar a dificuldade dos exercício
 \vspace{5mm}
 
 \begin{enumerate}
-\item Determine se as grandezas abaixo são proporcionais, inversamente proporcionais ou nenhum dos dois. Não é necessária verificar se são diretamente, isso é, quando uma zera, a outra também zera. \1
+\item Determine se as grandezas abaixo são proporcionais, inversamente proporcionais ou nenhum dos dois. Não é necessária verificar se são diretamente, isso é, quando uma zera, a outra também zera. Quando não houver relação direta, explique por que ela não existe. \1 a \2
 
 \begin{enumerate}
     \item Quantidade de alunos e o número de carteiras numa sala;
@@ -297,7 +312,7 @@ Para ajudá-los, adotei um sistema para classificar a dificuldade dos exercício
     \end{enumerate}
 
 
-\item Nos itens abaixo, determine se as grandezas são diretamente ou inversamente proporcionais e resolva as situações problemas. \1.
+\item Nos itens abaixo, determine se as grandezas são diretamente ou inversamente proporcionais e resolva as situações problemas. \1 a \3
 \begin{enumerate}
 \item Para alimentar o seu cão, uma pessoa gasta $10\ kg$ de ração a cada $15$ dias. Qual a quantidade total de ração consumida por semana, considerando que, por dia, é sempre colocada a mesma quantidade de ração?  
 \item Uma torneira enche um tanque em $5$ horas. Quanto tempo levaria para $3$ com a mesma vazão da torneira anterior  encherem esse mesmo tanque?
@@ -305,7 +320,8 @@ Para ajudá-los, adotei um sistema para classificar a dificuldade dos exercício
 \item Em uma empresa, uma máquina produz $25$ milhares de unidades de parafuso por semana. O gerente deseja expandir a produção para mais regiões do país e comprará mais $7$ máquina idênticas à primeira. Qual é a produção esperada por semana após a expansão?
 \item Uma concorrente da empresa leva $15$ dias para produzir $150$ milhares de unidades de parafuso. Eles desejam reduzir esse tempo para, no máximo, $4$ dias. Quantas máquinas eles devem comprar para atender o novo prazo? Lembre-se que não é possível comprar meia máquina, arredonde apropriadamente a sua resposta.
 \item O ângulo externo de um polígono regular é inversamente proporcional à quantidade de lados. Se um polígono de $3$ lados tem ângulos internos iguais a $120 $\textdegree, determine o ângulo externo de um polígono de $7$ lados.
-\item \2 Usando o mesmo cenário do item anterior, determine o ângulo externo de um polígono de $n$ lados. A sua resposta deve ser a fórmula para o ângulo externo de um polígono regular, ou seja, isole o ângulo em função da quantidade de lados.
+\item \3 Usando o mesmo cenário do item anterior, determine o ângulo externo de um polígono de $n$ lados. A sua resposta deve ser a fórmula para o ângulo externo de um polígono regular, ou seja, isole o ângulo em função da quantidade de lados. Lembre-se que a soma dos ângulos externos de um polígono sempre é 360\textdegree.
+\\ Dica: pense no que acontece se dobrarmos o número de lados.
 \item Na fase final de um jogo, o inimigo causa dano ao jogador de maneira inversamente proporcional à distância entre o jogador e o inimigo. A uma distância de $6m$, o jogador leva $150$ pontos de dano. Qual deve ser a distância para o dano ser menor que $100$ pontos? E menor que $50$ pontos? E menor que $10$ pontos?
 \item Ainda que pouco usado no cotidiano, define-se $1\ hm$ (lê-se "hectômetro") como $100\ m$. Converta $5\ hm$, $6.7\ hm$, $13.1\ hm$ e $50\ hm$ em metros. Agora, converta $1\ m$, $150\ m$, $6548\ m$, $1500\ m$ e $0.1\ m$ em $hm$.
 \item $1m^3$ de água é equivalente a $1.000L$ de água. Determine quantos litros de água equivalem a $8m^3$ de água. Escreva com suas palavras uma maneira de converter $m^3$ em $L$.
@@ -325,4 +341,3 @@ Para ajudá-los, adotei um sistema para classificar a dificuldade dos exercício
 
 \end{enumerate}
 \end{document}
-
